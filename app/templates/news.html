@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% import "macro.html" as macro %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- content block -->
+    {% block content %}
+    <div class="container">
+      <div class="jumbotron">
+      <u><h1 class="text-center" style="font-size: 60px">NOUVELLES</h1></u>
+      <h5 class="text-center" style="font-size: 20px">Welcome to NOUVELLES! your number one source to get uptodate on News, Nouvelles is the literal french translation for news! So go on check out whats new or learn something new</h1>
+      </div>
+        <h5 class="text-center" style="font-size: 20px"><span style="color:red;font-weight:bold">Scroll down below to see the tailored news feed and click the source you prefer to see whats new</span></h1></u>
+      
+        <hr />
+
+        <hr />
+      <!-- Poster background -->
+      <div class="row">
+        {% if news %} {{macro.displayNews(news)}} {% else %}
+        <h3 class="text-center">You have no news</h3>
+        {% endif %}
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
